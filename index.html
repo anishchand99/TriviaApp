@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>TriviaQuiz</title>
+          <link rel = 'stylesheet' type= 'text/css' href='styles.css'/>
+</head>
+<body>
+          <div class="container">
+                    <div class="introScreen">
+                              <div class="navbar">
+                                        <ul>
+                                                  <li>TriviaQuiz</li>
+                                                  <li class='right'><span><a href='https://anishchand.com'>By Anish Chand</a></span></li>
+                                        </ul>
+                              </div>                            
+                              <div class="filters">
+                                        <div><label for="category">Category Type:&nbsp;</label>
+                                        <select id = 'category-type'>
+                                                  <option value=''>Random</option>
+                                                  <option value='General Knowledge'>General Knowledge</option>
+                                                  <option value='Film'>Film</option>
+                                                  <option value='Music'>Music</option>
+                                                  <option value='Science & Nature'>Science & Nature</option>
+                                                  <option value='Sports'>Sports</option>
+                                                  <option value='Geography'>Geography</option>
+                                                  <option value='History'>History</option>
+                                                  <option value='Celebrities'>Celebrities</option>
+                                                  <option value='Animals'>Animals</option>
+                                        </select>
+                                        &nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <div>
+                                        <label for="difficulty">Difficulty:&nbsp;</label>
+                                        <select id = 'difficulty-type'>
+                                                  <option value=''>Random</option>
+                                                  <option value='easy'>Easy</option>
+                                                  <option value='medium'>Medium</option>
+                                                  <option value='hard'>Hard</option>
+                                        </select>
+                                        &nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <div>
+                                        <label for="question-count">Question Count:&nbsp;</label>
+                                        <input type="number" min='1' max= '15' value='1'  id = 'question-count' placeholder="  number of question">
+                                        &nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <div><button class = 'start' onclick="startQuiz()">Begin</button></div>
+                              </div>
+                              <div class="description">
+                                        <p>
+                                                  This is a triva application. This application makes use of the opensource trivia api called 'OpenTrivia'. For more details, check
+                                                  out &nbsp;<a href ='https://opentdb.com/'>OpenTrivia</a>.
+                                        </p>
+                                        <br>
+                                        <p>
+                                                  You can select different categories from the above dropdown menu. There are three levels of difficulty: easy, medium and hard.
+                                                  The easy questions are scored 5 points, the medium are 10 points and the hard questions are worth 15 points.
+                                        </p>
+                                        <br>
+                                        <p>
+                                                  There may be some problems in finding all unique questions to a very specific criteria and may cause repitions due to low
+                                                  volume of questions. For example: 50 questions of Celebrities in easy setting may return duplicate questions.
+                                        </p>
+                              </div>
+                    </div>
+                    <div class = 'mainScreen'>
+                              <div class="navbar">
+                                        <ul>
+                                                  <li>TriviaQuiz</li>
+                                                  <li class='right'>Current Score: <span id = 'currentScore'> 0</span></li>
+                                        </ul>
+                              </div>
+                              <div class="question">
+                                        <div class="points">Point:&nbsp<span id = 'pointValue'> 0</span></div>
+                                        <div class="questionText"></div>
+                                        <div class="options">
+                                                  <button class="optionA" id ='opt' onclick="checkAnswer(this)"> Option A</button>
+                                                  <button class="optionB" id ='opt' onclick="checkAnswer(this)">Option B</button>
+                                                  <button class="optionC" id ='opt' onclick="checkAnswer(this)">Option C</button>
+                                                  <button class="optionD" id ='opt' onclick="checkAnswer(this)">Option D</button>
+                                        </div>
+                                        <div class="result"></div>
+                                        <button class = 'next' onclick="nextQuestion()"> Next Question </button>
+                              </div>
+                    </div>
+                    <div class="endScreen">
+                              <div class="navbar">
+                                        <ul>
+                                                  <li>TriviaQuiz</li>
+                                                  <li class='right'>&copy; Anish Chand</span></li>
+                                        </ul>
+                              </div>                            
+                              <div class="end">
+                                        <div class="totalQuestionsAsked"></div>         
+                                        <div class="totalPointsReceived"></div>
+                                        <div class="totalCorrectAnswers"></div>
+                                        <div class="highScore"></div>
+                              </div>
+                    </div>
+          </div>
+          <script src= './scripts/script.js'></script>
+</body>
+</html>

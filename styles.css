@@ -1,0 +1,161 @@
+*{
+          margin: 0;
+}
+@font-face{
+          font-family: PoppinsRegular;
+          src: url('./fonts/Poppins-Regular.ttf');
+}
+@font-face{
+          font-family: PoppinsLight;
+          src: url('./fonts/Poppins-Light.ttf');
+}
+@font-face{
+          font-family: Simplifica;
+          src: url('./fonts/Simplifica.ttf');
+}
+@font-face{
+          font-family: MontSerrat;
+          src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+.container{
+          background: #70e1f5;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to left, #ffd194, #a4ffeb);  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to left, #ffd194, #a4ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */          
+          min-height: 100vh;
+}
+.introScreen{
+          display: block;
+          font-size: 2.5vh;
+          height: 100vh;
+}
+.mainScreen{
+          display: none;
+          height: 100vh;
+}
+.endScreen{
+          display: none;
+          height: 100vh;
+}
+.end{
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          font-size: 20px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center; 
+          font-family: PoppinsRegular;
+          font-weight: bolder;
+}
+.navbar{
+          height: 10vh;
+          width: 100%;
+}
+ul{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-right: 10px;
+          font-family: PoppinsRegular;
+          font-weight: bolder;
+}
+li{
+          font-size: 3vh;
+          list-style: none;
+          margin-top: 15px;
+          margin-left: 0px;
+}
+.right{
+          font-size: 3vh;
+          margin-left: auto;
+}
+
+.filters{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 95%;
+          margin: auto;
+          font-family: MontSerrat;
+          min-height: 20vh;
+}
+select{
+          font-family: MontSerrat;
+}
+
+@media(max-width: 600px){
+          .filters{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    font-family: MontSerrat;
+                    min-height: 20vh;
+          }
+          #opt{
+                    margin: 10px;
+                    color: #333;
+                    padding: 10px;
+          }
+}
+.description{
+          width: 85%;
+          margin: auto;
+          margin-top: 20px;
+          font-family: MontSerrat;
+          font-size: 2.5vh;
+          height: 65vh;
+}
+.start{
+          font-family: MontSerrat;
+}
+.points{
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          margin: 25px;
+}
+.question{
+          font-family: MontSerrat;
+          font-size: 2.2vh;
+          color: #333;
+          font-weight: bolder;
+          text-align: center;
+          height: 85vh;
+          width: 85%;
+          margin: 0 auto;
+          border: 5px solid rgba(0,0,0,0.7);
+          border-radius: 5px;
+}
+.questionText{
+          overflow-y: auto;
+          margin: 25px;
+}
+.options{
+          display: grid;
+          grid-template-columns: 50% 50%;
+          box-sizing: border-box;
+}
+#opt{
+          font-family: Simplifica;
+          font-size: 1.1em;
+          font-weight: bolder;
+          box-sizing: border-box;
+          margin: 10px;
+          color: #333;
+          padding: 25px;
+          border: 2px solid salmon;
+          border-radius: 10px;
+}
+#opt:hover{
+          cursor: pointer;
+}
+.next{
+          box-sizing: border-box;
+          margin: 25px;
+          font-family: PoppinsRegular;
+          padding: 25px;
+          font-size: 2vh; 
+}
