@@ -150,7 +150,7 @@ scorePoints = (outcome) => {
 retrieveHighScore = (totalScore) => {
           console.log(window.localStorage.getItem('highScore'))
           let highScore = document.querySelector('.highScore');
-          if(window.localStorage.getItem('highScore') != null || window.localStorage.getItem('highScore') < totalScore){
+          if(window.localStorage.getItem('highScore') == null || window.localStorage.getItem('highScore') < totalScore){
                     window.localStorage.setItem('highScore', `${totalScore}`);
                     highScore.textContent = totalScore; 
           }
